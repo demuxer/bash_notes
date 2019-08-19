@@ -1,0 +1,13 @@
+LoginGraceTime 2m
+MaxAuthTries 6
+PasswordAuthentication yes
+ChallengeResponseAuthentication no
+UsePAM yes
+X11Forwarding no
+PrintMotd no
+AcceptEnv LANG LC_*
+Subsystem       sftp    /usr/lib/openssh/sftp-server
+Match group sftp
+ChrootDirectory /home/sftp
+AllowTcpForwarding no
+ForceCommand internal-sftp
